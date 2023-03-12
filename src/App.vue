@@ -44,12 +44,14 @@
       <!-- Button -->
 
       <Transition name="fade" mode="out-in">
-      <div class="block md:hidden ">
-        <button @click="toggleShowNavBar" class="border rounded px-2.5 py-1 flex items-end -mr-10 dark:bg-white">
+      <div class="absolute md:hidden top-9 right-9">
+
+        <button @click="toggleShowNavBar" class="border rounded px-2.5 py-1 flex items-end dark:bg-white">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
+ 
       </div>
     </Transition>
 
