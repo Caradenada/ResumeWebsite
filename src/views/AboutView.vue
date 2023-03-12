@@ -2,15 +2,7 @@
   import { useDark } from "@vueuse/core";
   import { gsap } from "gsap";
 import { ref, onMounted } from "vue";
-const text = ref();
-const element = (text.value).firstChild as HTMLElement;
 
-const textMouseOver = () => {
-  
-  let regex = new RegExp("( )"); 
-  text.value.split(regex);
-  
-};
 
   const isDark = useDark();
 onMounted(() => {
