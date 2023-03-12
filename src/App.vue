@@ -1,7 +1,7 @@
 <template>
   <div v-show="loaded" ref="loadingPage" class="flex h-screen">
-    <div class="m-auto">
-    <h1 ref="split" class="text-Roboto text-3xl ">A L M A D A || M A T I A S</h1>
+    <div class="m-auto overflow-hidden">
+    <h1 ref="split" class="text-Roboto text-xl md:text-3xl ">A L M A D A || M A T I A S</h1>
   </div>
   </div>
   <div ref="mainPage" class="min-h-screen fixed bg-white dark:bg-gray-800 transition-all duration-1000 opacity-0">
@@ -24,8 +24,8 @@
     <nav class="h-30 w-screen  space-x-8 pr-36 pt-8 flex justify-end sm:flex-row relative">  
       <div class="h-20 w-20 flex-1 pl-10 block">
         
-        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
-        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-10 md:h-20 w-10 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-10 md:h-20 w-10 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
       </div>
 
       <!-- Navigation bar -->
@@ -46,8 +46,8 @@
       <Transition name="fade" mode="out-in">
       <div class="absolute md:hidden top-9 right-9">
 
-        <button @click="toggleShowNavBar" class="border rounded px-2.5 py-1 flex items-end dark:bg-white">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <button @click="toggleShowNavBar" class="border rounded px-1.5 md:px-2.5 py-1 flex items-end dark:bg-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-6 w-3 md:h-6 h-3">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
