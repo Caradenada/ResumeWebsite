@@ -24,8 +24,8 @@
     <nav class="h-30 w-screen  space-x-8 pr-36 pt-8 flex justify-end sm:flex-row relative">  
       <div class="h-20 w-20 flex-1 pl-10 block">
         
-        <img v-if="!isDark" src=" ./public/Amicon.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
-        <img v-if="isDark" src=" ./public/AmiconDarkMode.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-20  w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
       </div>
 
       <!-- Navigation bar -->
