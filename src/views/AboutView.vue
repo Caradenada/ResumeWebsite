@@ -25,11 +25,11 @@ onMounted(() => {
 <template>
   <main>
     
-    <div class=" flex flex-col-reverse md:flex-row h-screen w-screen items-center mx-auto px-6 mt:5 md:mt-10 space-y-0 md:space-y-10 dark:text-white font-Roboto">
+    <div class=" flex flex-col-reverse md:flex-row h-screen w-screen items-center mx-auto px-6 mt:5 md:mt-10 space-y-0 md:space-y-10 dark:text-white font-Roboto transition-all">
     
       <!-- Left Side -->
-      <Transition name="nav" mode="out-in">
-      <div  class="flex flex-col items-center mb-32 space-y-12 md:w-1/2 h-screen md:my-auto pt-16 md:pt-56 ">
+      
+      <div  class="flex flex-col items-center mb-32 space-y-12 md:w-1/2 h-screen md:my-auto pt-10 md:pt-56 transition-all">
         <h1 class="max-w-md text-center font-bold text-4xl md:text-6xl   md:text-left text-curriculum-primary dark:text-violet-500"> Sobre Mi</h1>
         <div class="space-y-8" ref="text">
         <p class="max-w-sm text-center text-gray-500 md:text-left dark:text-gray-300 text-xl dark:font-bold">
@@ -45,9 +45,9 @@ onMounted(() => {
         </p>
       </div>
       </div>
-      </Transition>
+      
       <!-- Right Side -->
-      <div class="md:flex hidden flex-col ml md:h-screen md:w-1/2 md:pl-10 pt-10 md:pt-44">
+      <div class="md:flex hidden flex-col ml md:h-screen md:w-1/2 md:pl-10 md:pt-44">
         
         
       </div>
@@ -56,16 +56,6 @@ onMounted(() => {
 </template>
 <style scoped>
 
-.nav-enter-active,
-.nav-leave-active {
-  transition: 0.3s ease all;
-}
 
-.nav-enter-from,
-.nav-leave-to{
-  transform: translateX(-500px);
-}.nav-enter-to{
-  transform: translateX(0);
-}
 
 </style>

@@ -22,10 +22,10 @@
     </div>
   <header>
     <nav class="h-30 w-screen  space-x-8 pr-36 pt-8 flex justify-end sm:flex-row relative">  
-      <div class="h-20 w-20 flex-1 pl-10 block">
+      <div class="h-20 w-20 top-10 left-10 absolute">
         
-        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-10 md:h-20 w-10 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
-        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-10 md:h-20 w-10 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-16 md:h-20 w-16 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-16 md:h-20 w-16 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
       </div>
 
       <!-- Navigation bar -->
@@ -44,10 +44,10 @@
       <!-- Button -->
 
       <Transition name="fade" mode="out-in">
-      <div class="absolute md:hidden top-9 right-9">
+      <div class="absolute md:hidden top-8 right-9">
 
-        <button @click="toggleShowNavBar" class="border rounded px-1.5 md:px-2.5 py-1 flex items-end dark:bg-white">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:w-6 w-3 md:h-6 h-3">
+        <button @click="toggleShowNavBar" class="border rounded px-2 py-1 flex items-end dark:bg-white">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
         </button>
@@ -59,18 +59,18 @@
 
     </nav>
     <Transition name="nav" mode="out-in">
-    <div v-show="mobileNavBar" class="w-full items-center flex flex-col justify-center pb-5 overflow-y-hidden" >
-          <RouterLink class="px-3 pb-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-blue-300 transition-all duration-500 " to="/">Inicio</RouterLink>
-          <RouterLink class="px-3 py-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-blue-300 transition-all duration-500 " to="/about">Sobre Mi</RouterLink>
-          <RouterLink class="px-3 py-3  font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-blue-300 transition-all duration-500 " to="/curriculum">Curriculum</RouterLink>
-          <RouterLink class="px-3 py-3  font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-blue-300 transition-all duration-500 " to="/contact">Contacto</RouterLink>
+    <div v-show="mobileNavBar" class="w-full items-center flex flex-col justify-center pt-14 pb-1 overflow-y-hidden" >
+          <RouterLink class="md:px-3 py-1 md:pb-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/">Inicio</RouterLink>
+          <RouterLink class="md:px-3 py-1 md:py-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/about">Sobre Mi</RouterLink>
+          <RouterLink class="md:px-3 py-1 md:py-3  font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/curriculum">Curriculum</RouterLink>
+          <RouterLink class="md:px-3 py-1 md:py-3  font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/contact">Contacto</RouterLink>
         </div>
       </Transition>
   </header>
 
   <!-- Page content -->
   
-  <RouterView v-slot="{Component}" class="overflow-hidden">
+  <RouterView v-slot="{Component}" class="overflow-hidden transition-all">
     <Transition name="fade" mode="out-in">
       <component :is="Component" />
     </Transition>

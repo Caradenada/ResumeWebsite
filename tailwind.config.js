@@ -12,6 +12,8 @@ module.exports = {
         "curriculum-primary": "#00ab44",
         "background-primary": "#00668A",
         "background-secondary": "#004E71",
+        "curriculum-bg1": "#404258",
+        "curriculum-bg2": "#474E68",
       },
     },
     fontFamily: {
