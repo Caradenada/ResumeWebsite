@@ -1,10 +1,10 @@
 <template>
-  <div v-show="loaded" ref="loadingPage" class="flex h-screen">
+  <div v-show="loaded" ref="loadingPage" class="flex absolute inset-0 h-screen overflow-hidden">
     <div class="m-auto overflow-hidden">
     <h1 ref="split" class="text-Roboto text-xl md:text-3xl ">A L M A D A || M A T I A S</h1>
   </div>
   </div>
-  <div ref="mainPage" class="min-h-screen fixed bg-white dark:bg-gray-800 transition-all duration-1000 opacity-0">
+  <div ref="mainPage" class="h-screen  bg-white dark:bg-gray-800 transition-all duration-1000 opacity-0">
     
     <div>
       <button class="fixed bottom-5 right-5 ">
