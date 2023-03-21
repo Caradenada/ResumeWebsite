@@ -50,11 +50,14 @@ link.remove();
 
       </div>
     </div>
-    <div ref="download" class="md:hidden flex flex-col font-bold items-center mb-32 space-y-20 pt-20 ">
+
+    <!-- Mobile VIEW -->
+
+    <div ref="download" class="md:hidden flex flex-col font-bold items-center mb-32 space-y-10 pt-10 ">
       
-      <h1 class="flex max-w-md dark:text-white text-center font-Roboto text-black text-3xl md:text-left">DESCARGA MI <span class="text-curriculum-primary pl-1 text-center md:text-left dark:text-violet-600">CURRICULUM</span></h1>
+      <h1 class="flex max-w-md dark:text-white text-center font-Roboto text-black text-2xl md:text-left">DESCARGA MI <span class="text-curriculum-primary pl-1 text-center md:text-left dark:text-violet-600">CURRICULUM</span></h1>
      <div class="flex space-x-6">
-      <button  @click="downloadFileES" class=" border hover:bg-green-400 transition-all items-center flex font-bold rounded-full h-14 w-44 py-3 px-6 font-Roboto text-white bg-green-500 dark:bg-violet-600 dark:hover:bg-violet-500 shadow-2xl">
+      <button  @click="downloadFileES" class=" border hover:bg-green-400 transition-all items-center flex font-bold rounded-full h-14 w-44 py-3 px-6 font-Roboto text-white bg-green-500 dark:bg-violet-600 dark:hover:bg-violet-500 shadow-xl">
         
         <h1 class="flex ">DESCARGA</h1> 
         <div class="flex pl-6">
@@ -64,7 +67,7 @@ link.remove();
 
         </div>
       </button>
-      <button  @click="downloadFileEN" class=" border hover:bg-green-400 transition-all items-center flex font-bold rounded-full h-14 w-44 py-3 px-6 font-Roboto text-white bg-green-500 dark:bg-violet-600 dark:hover:bg-violet-500 shadow-2xl">
+      <button  @click="downloadFileEN" class=" border hover:bg-green-400 transition-all items-center flex font-bold rounded-full h-14 w-44 py-3 px-6 font-Roboto text-white bg-green-500 dark:bg-violet-600 dark:hover:bg-violet-500 shadow-xl">
         
         <h1 class="flex ">DOWNLOAD</h1> 
         <div class="flex pl-6">
@@ -75,7 +78,7 @@ link.remove();
         </div>
       </button>
     </div>
-      <img  class="w-1/4 h-1/4 border rounded" src="/Cv.jpg" alt="NotFund">
+      <img  class="w-1/2 h-1/2 border rounded" src="/Cv.jpg" alt="NotFund">
     </div>
   </main>
 </template>
