@@ -22,10 +22,11 @@
     </div>
   <header>
     <nav class="h-30 w-screen  space-x-8 pr-36 pt-8 flex justify-end sm:flex-row relative">  
-      <div class="h-20 w-20 top-10 left-10 absolute">
-        
-        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-16 md:h-20 w-16 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
-        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-16 md:h-20 w-16 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+      <div class="h-20 w-20 mt-4 md:mt-0 ml-10 flex-1">
+        <RouterLink to="/">
+        <img v-if="!isDark" src=" /Amicon.png " class="object-scale-down h-12 md:h-20 w-12 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        <img v-if="isDark" src=" /AmiconDarkMode.png " class="object-scale-down h-12 md:h-20 w-12 md:w-20 font-bold font-sans flex-1 pb-2 -mt-4 transition-all ">
+        </RouterLink>
       </div>
 
       <!-- Navigation bar -->
@@ -59,7 +60,7 @@
 
     </nav>
     <Transition name="nav" mode="out-in">
-    <div v-show="mobileNavBar" class="w-full items-center flex flex-col justify-center pt-14 pb-1 overflow-y-hidden" >
+    <div v-show="mobileNavBar" class="w-full items-center flex flex-col justify-center pb-1 overflow-y-hidden" >
           <RouterLink class="md:px-3 py-1 md:pb-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/">Inicio</RouterLink>
           <RouterLink class="md:px-3 py-1 md:py-3 font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/about">Sobre Mi</RouterLink>
           <RouterLink class="md:px-3 py-1 md:py-3  font-Roboto font-bold dark:text-white text-black hover:text-lg hover:text-green-300 dark:hover:text-violet-400 transition-all duration-500 " to="/curriculum">Curriculum</RouterLink>
@@ -76,14 +77,15 @@
     </Transition>
   </RouterView>
 </div>
-</template>
-<script setup lang="ts">
-// Imports
 
+</template>
+<script type="module" setup lang="ts">
+// Imports
 import { RouterLink, RouterView } from 'vue-router';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, render } from 'vue';
 import { useDark, useToggle } from "@vueuse/core";
 import { gsap } from "gsap";
+
 
 
 // Script starts
@@ -92,6 +94,7 @@ const navBar = ref();
 const mainPage = ref();
 const split = ref();
 const loadingPage = ref();
+let loadedModel;
 let loaded = ref(true);
  let mobileNavBar = ref();
  let windowWidth = ref();
@@ -107,6 +110,8 @@ function delay(ms: number) {
        setTimeout(resolve, ms);
     });
 };
+
+
 const loadPage = () => {
     async function loading() {
     await delay(1500);
@@ -166,6 +171,7 @@ const toggleShowNavBar = () => {
 window.addEventListener('resize',checkScreen);
 window.addEventListener('load',checkScreen);
 window.addEventListener('load',loadPage);
+
 </script>
 
 <style scoped>
