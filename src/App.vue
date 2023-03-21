@@ -94,7 +94,6 @@ const navBar = ref();
 const mainPage = ref();
 const split = ref();
 const loadingPage = ref();
-let loadedModel;
 let loaded = ref(true);
  let mobileNavBar = ref();
  let windowWidth = ref();
