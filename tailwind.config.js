@@ -18,6 +18,7 @@ module.exports = {
     },
     fontFamily: {
       Roboto: ["Roboto, sans-serif"],
+      Bruno: ["Bruno Ace, cursive"],
     },
     container: {
       padding: "2rem",

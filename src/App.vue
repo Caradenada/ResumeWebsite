@@ -32,7 +32,7 @@
      
       </button>
     </div>
-  <header>
+  <header class="">
     <nav class="h-30 w-screen  space-x-8 pr-36 pt-8 flex justify-end sm:flex-row relative">  
       <div class="h-20 w-20 mt-4 md:mt-0 ml-10 flex-1">
         <RouterLink to="/">
@@ -85,12 +85,13 @@
 
   <!-- Page content -->
   
-  <RouterView v-slot="{Component}" class="overflow-hidden transition-all">
+  <RouterView v-slot="{Component}" class="overflow-hidden transition-all flex flex-1">
     <Transition name="fade" mode="out-in">
       <component :is="Component" />
     </Transition>
   </RouterView>
 </div>
+
 
 </template>
 <script type="module" setup lang="ts">
