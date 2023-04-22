@@ -36,18 +36,26 @@ link.remove();
   opacity: 1,
   stagger: 0.2,
 });
+gsap.fromTo("section",{
+  y: -1000,
+opacity:0,
+}, {
+  y:0,
+  stagger: 0.3,
+  opacity: 0.3,
+});
 
 });
 </script>
 
 <template>
   <main>
-    <div>
-      <div ref="right">
-
-      </div>
-      <div ref="left">
-
+    <div class=" flex-row hidden md:flex ">
+      
+      <div ref="left" class="">
+        <section class="flex relative h-screen w-screen dark:bg-black bg-white items-center justify-center" >
+          <p class="text-center font-Roboto text-black font-bold text-9xl">Hola</p>
+        </section>
       </div>
     </div>
 
@@ -78,7 +86,7 @@ link.remove();
         </div>
       </button>
     </div>
-      <img  class="w-1/2 h-1/2 border rounded" src="/Cv.jpg" alt="NotFund">
+      <img  class="w-1/2 h-1/2 border rounded shadow-xl" src="/Cv.jpg" alt="NotFund">
     </div>
   </main>
 </template>
