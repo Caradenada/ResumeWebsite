@@ -37,12 +37,10 @@ link.remove();
   stagger: 0.2,
 });
 gsap.fromTo("section",{
-  y: -1000,
-opacity:0,
+  y: -2000,
 }, {
   y:0,
   stagger: 0.3,
-  opacity: 0.3,
 });
 
 });
@@ -50,12 +48,18 @@ opacity:0,
 
 <template>
   <main>
-    <div class=" flex-row hidden md:flex ">
+    <div class=" hidden relative md:block ">
       
       <div ref="left" class="">
-        <section class="flex relative h-screen w-screen dark:bg-black bg-white items-center justify-center" >
-          <p class="text-center font-Roboto text-black font-bold text-9xl">Hola</p>
+        <section class="absolute h-screen w-screen dark:bg-black bg-white items-center justify-center opacity-30" >
+            
+          </section>
+        <section class="absolute h-screen w-screen dark:bg-black bg-white items-center justify-center opacity-60" >
+          
         </section>
+        <section class="absolute h-screen w-screen dark:bg-black bg-white items-center justify-center opacity-100" >
+            
+          </section>
       </div>
     </div>
 

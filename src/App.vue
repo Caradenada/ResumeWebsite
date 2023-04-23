@@ -128,6 +128,7 @@ function delay(ms: number) {
 
 const loadPage = () => {
     async function loading() {
+    console.log("Bienvenido a mi pagina ( ͡~ ͜ʖ ͡°)")
     await delay(1500);
     gsap.to(loadingPage.value, {
     delay: 0.5,
@@ -142,7 +143,7 @@ const loadPage = () => {
     stagger: 0.2,
     });
     loaded.value = false;
-    console.log('page Loaded')
+    
   };
   loading();
 };
